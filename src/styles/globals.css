@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  margin-block: 5px;
+  margin-inline: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+  border-radius: 100vw;
+}
+
+html {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+p {
+  font-family: "DM Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.header-navmenu a {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif !important;
+}
+.header-navmenu a:hover {
+  color: rgb(5, 1, 236) !important;
+}
+
+.header-navmenu a.active {
+  color: rgb(5, 1, 236) !important;
+}
+.homeactive {
+  color: rgb(5, 1, 236) !important;
+}
+
+.header-navmenu .home-link {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* .header-navmenu .home-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FD9800;
+  transition: width 0.3s ease-in-out;
+} */
+
+.header-navmenu .home-link:hover::after,
+.header-navmenu .homeactive::after {
+  width: 100%;
+}
+
+.glory-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glory-section::before {
+  content: "";
+  background-image: url(/assets/banner/banner.webp);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  filter: brightness(0.9);
+}
+
+.glory-text-line .glory-text {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.glory-text-line .glory-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 46.2%;
+  width: 8%;
+  height: 2px;
+  background-color: #fd9800;
+  transition: width 0.3s ease-in-out;
+}
+
+.header-navmenu-mubile a {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif !important;
+}
+.header-navmenu-mubile a:hover {
+  color: #fd9800 !important;
+}
+
+.glory-line {
+  width: 40px;
+  text-align: center;
+  border-bottom: 3px solid rgb(140, 241, 39);
+  line-height: 0.1em;
+  margin: 8px 0 20px;
+}
+
+.glory-sections {
+  position: relative;
+  /* min-height: 50vh;  */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glory-sections::before {
+  content: "";
+  background-image: url(/assets/dummy/glory-banner.webp);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  filter: brightness(0.6);
+}
+
+.language-select {
+  border-radius: 50px !important;
+  border-color: #fff !important;
+  border: 1px solid #fff !important;
+  background: transparent !important;
+  height: 48px;
+  padding: 0px 20px;
+  color: #fff !important;
+  width: 130px;
+}
+
+.language-select option {
+  color: #000 !important;
+}
+
+.language-select:focus-visible,
+.country-select-actomplete:focus-visible {
+  outline: none !important;
+}
+
+.slider-white-dots .slick-active .reactslick-custom-dots {
+  width: 80px !important;
+  height: 8px !important;
+  background: #669934 !important;
+  border-radius: 28px !important;
+  opacity: 100% !important;
+}
+
+.slider-white-dots .reactslick-custom-dots {
+  width: 8px !important;
+  height: 8px !important;
+  background: #07447e !important;
+  border-radius: 28px !important;
+  opacity: 80% !important;
+}
+
+.slider-white-dots .slick-dots li {
+  height: unset !important;
+  width: unset !important;
+}
+
+.slider-white-dots .slick-dots .slick-active {
+  width: unset !important;
+  height: unset !important;
+}
+
+.banner-selections .slick-dots {
+  bottom: 20px;
+}
+
+.search-bar-new1 .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+  border-color: none !important;
+}
+
+.search-bar-new1 .MuiOutlinedInput-root {
+  padding: 9px 16px !important;
+}
+
+.search-here1 .MuiInputBase-inputAdornedEnd {
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+.book-select-input {
+  border-radius: 50px !important;
+  height: 42px;
+}
+
+.textfield-homeform .MuiOutlinedInput-root,
+.datepicker-sections .MuiOutlinedInput-root {
+  border-radius: 50px !important;
+  height: 42px !important;
+}
+
+.textfield-homeform .MuiInputBase-input,
+.datepicker-sections .MuiInputBase-input {
+  font-size: 14px !important;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif !important;
+}
+.zoom-img img {
+  object-fit: cover;
+  transition: all .3s ease;
+}
+
+.zoom-img img:hover {
+  transform: scale(1.2);
+}
