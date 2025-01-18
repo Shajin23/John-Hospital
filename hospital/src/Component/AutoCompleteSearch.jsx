@@ -139,8 +139,8 @@ export const AutoCompleteSearch = (props) => {
                   <div>
                     <ImageCommon
                       src="/assets/icons/search-icon.svg"
-                      width={18}
-                      height={18}
+                      width={40}
+                      height={40}
                       alt="search"
                     />
                   </div>

@@ -12,7 +12,12 @@ import { Controller, useForm } from "react-hook-form";
 const HomeBook = () => {
   const { control } = useForm();
   return (
-    <Box sx={{ pt: { xs: 3, sm: 4, md: "10px" } }}>
+    <Box
+      sx={{
+        pt: { xs: 3, sm: 4, md: "10px" },
+        pb: { xs: 3, sm: 4, md: "25px" },
+      }}
+    >
       <Container
         maxWidth={"lg"}
         sx={{
@@ -29,6 +34,7 @@ const HomeBook = () => {
               alignItems: "center",
               justifyContent: { xs: "center", md: "start" },
             }}
+            className="zoom-img-book"
           >
             <ImageCommon
               src={"/assets/dummy/book-img.webp"}
@@ -106,7 +112,13 @@ const HomeBook = () => {
 
                   <CustomImageButton
                     label="Book your Appointment"
-                    sx={{ backgroundColor: "#669934", width: "100%" }}
+                    sx={{
+                      backgroundColor: "#669934",
+                      width: "100%",
+                      "&:hover": {
+                        backgroundColor: "#87b94a",
+                      },
+                    }}
                   />
                 </Box>
               </Box>

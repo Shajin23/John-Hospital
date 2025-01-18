@@ -74,7 +74,9 @@ const Homespecialities = () => {
               </Typography>
               <CustomImageButton
                 label="VIEW ALL"
-                sx={{ backgroundColor: "#669934" }}
+                sx={{ backgroundColor: "#669934", "&:hover": {
+                        backgroundColor: "#87b94a",
+                      },}}
               />
             </Box>
           </Grid>
@@ -89,12 +91,13 @@ const Homespecialities = () => {
                       alignItems: "center",
                       justifyContent: "center",
                     }}
+                     className="zoom-img"
                   >
                     <ImageCommon
                       src={item.image}
                       original={true}
-                      height="64px"
-                      width="64px"
+                      height="84px"
+                      width="84px"
                       objectFit="cover"
                     />
                     <Box sx={{ my: 3 }}>

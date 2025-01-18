@@ -8,28 +8,28 @@ const HomeDoctors = () => {
   const doctiors = [
     {
       id: 1,
-      image: "/assets/dummy/doctor-image.png",
+      image: "/assets/dummy/doctor-image.webp",
       title: " Dr: John Grifson",
       text: "Gastoroenterology, MBBS",
       dec: "Pharetra ultricies aenean, sit metus integer arcu turpis dnidimentum pellentesque world.",
     },
     {
       id: 2,
-      image: "/assets/dummy/doctor-image.png",
+      image: "/assets/dummy/doctor-image.webp",
       title: " Dr: John Grifson",
       text: "Gastoroenterology, MBBS",
       dec: "Pharetra ultricies aenean, sit metus integer arcu turpis dnidimentum pellentesque world.",
     },
     {
       id: 3,
-      image: "/assets/dummy/doctor-image.png",
+      image: "/assets/dummy/doctor-image.webp",
       title: " Dr: John Grifson",
       text: "Gastoroenterology, MBBS",
       dec: "Pharetra ultricies aenean, sit metus integer arcu turpis dnidimentum pellentesque world.",
     },
     {
       id: 4,
-      image: "/assets/dummy/doctor-image.png",
+      image: "/assets/dummy/doctor-image.webp",
       title: " Dr: John Grifson",
       text: "Gastoroenterology, MBBS",
       dec: "Pharetra ultricies aenean, sit metus integer arcu turpis dnidimentum pellentesque world.",
@@ -161,7 +161,9 @@ const HomeDoctors = () => {
         <Box sx={{display: "flex", justifyContent: "center", pt: 5}}>
           <CustomImageButton
             label="VIEW ALL"
-            sx={{ backgroundColor: "#07447e" }}
+            sx={{ backgroundColor: "#07447e", "&:hover": {
+      backgroundColor: "#0a68b0",
+    }, }}
           />
         </Box>
       </Container>

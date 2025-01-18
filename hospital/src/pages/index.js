@@ -5,6 +5,7 @@ import Homegallery from "@/Section/HomeSection/Homespecialities";
 import HomePromise from "@/Section/HomeSection/HomeDoctors";
 import HomeService from "@/Section/HomeSection/HomeContact";
 import Head from "next/head";
+import { HomeFooter } from "@/Layout/Footer";
 
 export default function Home() {
   return (
@@ -17,11 +18,7 @@ export default function Home() {
       </Head>
       <div>
         <HomeSection />
-        {/* <HomeBanner />
-        <HomeAbout />
-        <HomeService />
-        <HomePromise />
-        <Homegallery /> */}
+        <HomeFooter /> 
       </div>
     </>
   );
