@@ -53,7 +53,7 @@ const HomeTips = () => {
       const settings = {
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: false,
+        arrows: true,
         swipe: tips?.length > 4,
         infinite: tips?.length > 4,
         speed: 500,
@@ -99,7 +99,7 @@ const HomeTips = () => {
           </Box>
 
           <Box>
-          <Slider {...settings} className="comments-slider tips-slider">
+          <Slider {...settings} className="tips-slider">
           {tips.map((item) => (
             <Box sx={{ border: "1px solid #afafaf", borderRadius: "8px" }} key={item.id} className='card-box'>
               <Box sx={{ position: "relative" }} >

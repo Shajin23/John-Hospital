@@ -38,7 +38,7 @@ const HomeComments = () => {
   const settings = {
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    arrows: true,
     swipe: comments?.length > 3,
     infinite: comments?.length > 3,
     speed: 500,
