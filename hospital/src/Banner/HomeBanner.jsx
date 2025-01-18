@@ -109,7 +109,12 @@ export const HomeBanner = () => {
                     <Box sx={{ display: "flex", gap: { xs: 2, md: 5 }, pt: 1 }}>
                       <CustomImageButton
                         label="Appointment"
-                        sx={{ backgroundColor: "#07447e" }}
+                        sx={{
+                          backgroundColor: "#07447e",
+                          "&:hover": {
+                            backgroundColor: "#87b94a",
+                          },
+                        }}
                       />
                       <Button
                         sx={{
