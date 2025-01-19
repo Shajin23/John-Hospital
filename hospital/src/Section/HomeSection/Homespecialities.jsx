@@ -29,7 +29,7 @@ const Homespecialities = () => {
     {
       id: 5,
       image: "/assets/dummy/pancreas.png",
-      title: "Colon and Rectum",
+      title: "Colon and Rectum ",
     },
     {
       id: 6,
