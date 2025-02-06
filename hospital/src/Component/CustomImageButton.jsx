@@ -27,6 +27,7 @@ function CustomImageButton(props) {
           fontWeight: 400,
           fontFamily: "DM Sans",
           opacity: 0.8,
+          marginBottom:"0px !important"
         }}
       >
         {" "}

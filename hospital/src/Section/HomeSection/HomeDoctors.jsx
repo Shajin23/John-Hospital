@@ -163,7 +163,7 @@ const HomeDoctors = () => {
             label="VIEW ALL"
             sx={{ backgroundColor: "#07447e", "&:hover": {
       backgroundColor: "#0a68b0",
-    }, }}
+    },marginBottom:"0 !important" }}
           />
         </Box>
       </Container>

@@ -4,6 +4,7 @@ import {
   Grid,
   Box,
   Drawer,
+  Button,
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,12 +34,53 @@ export const Header = () => {
 
   return (
     <>
-      <Box>
+      <Box sx={{position:"sticky",top:0,zIndex:"1000",backgroundColor:"white",width:"100%"}}>
         <Container>
+        <Box sx={{ backgroundColor: "white", padding: "10px 0" }}>
+        <Container>
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item>
+              <div className="header-navmenu top-menu">
+              <Link href="/about-us" underline="none">
+                <span variant="body1">About Us</span>
+              </Link>
+              </div> 
+            </Grid>
+            <Grid item>
+            <div className="header-navmenu top-menu">
+              <Link href="/contact-us" underline="none">
+                <span variant="body1">Contact Us</span>
+              </Link>
+            </div>
+            </Grid>
+            <Grid item>
+            <div className="header-navmenu top-menu">
+              <Link href="/blog" underline="none">
+                <span variant="body1">Blog</span>
+              </Link>
+            </div>
+            </Grid>
+            <Grid item>
+            <div className="header-navmenu top-menu" >
+              <Link href="/emergency" underline="none" style={{color:"#c71d22"}}>
+                <span variant="body1" >EMERGENCY +91 9384398392</span>
+              </Link>
+            </div>
+            </Grid>
+            {/* <Grid item>
+            <div className="header-navmenu top-menu" >
+              <Link href="/ambulance" underline="none" style={{color:"#c71d22"}}>
+                <span variant="body1">AMBULANCE +91 8220724541</span>
+              </Link>
+            </div>
+            </Grid> */}
+          </Grid>
+        </Container>
+        </Box>
           <Box sx={{ height: "100px", display: "flex", alignItems: "center" }}>
             <Grid container>
               <Grid item xs={6} md={3} lg={4}>
-                <Box sx={{display: 'flex', alignItems: 'center'}}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   <Link href="/">
                     <ImageCommon
                       src="/assets/logo/logo.svg"
@@ -62,77 +104,105 @@ export const Header = () => {
                 }}
               >
                 <Box
-                  sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}
+                  sx={{ display: { xs: "none", md: "flex" }, gap: 4 , alignItems: "center" }}
                   className="header-box"
                 >
                   <div className="header-navmenu">
                     <Link
                       href="/"
-                      className={`home-link ${
-                        router.pathname === "/" ? "homeactive" : ""
-                      }`}
+                      className={`home-link ${router.pathname === "/" ? "homeactive" : ""
+                        }`}
                     >
                       <span>Home</span>
                     </Link>
                   </div>
-                  <div className="header-navmenu">
+                  {/* <div className="header-navmenu">
                     <Link
-                      href="/"
-                      className={`home-link ${
-                        router.pathname === "/about-us" ? "homeactive" : ""
-                      }`}
+                      href="/about-us"
+                      className={`home-link ${router.pathname === "/about-us" ? "homeactive" : ""
+                        }`}
                     >
                       <span>About</span>
                     </Link>
-                  </div>
+                  </div> */}
                   <div className="header-navmenu">
                     <Link
                       href="/specialities"
-                      className={`home-link ${
-                        router.pathname === "/specialities" ? "homeactive" : ""
-                      }`}
+                      className={`home-link ${router.pathname === "/specialities" ? "homeactive" : ""
+                        }`}
                     >
                       <span>Specialities</span>
                     </Link>
                   </div>
                   <div className="header-navmenu">
                     <Link
-                      href="/specialists"
-                      className={`home-link ${
-                        router.pathname === "/specialists" ? "homeactive" : ""
-                      }`}
+                      href="/ip"
+                      className={`home-link ${router.pathname === "/ip" ? "homeactive" : ""
+                        }`}
                     >
-                      <span> Specialists </span>
+                      <span>International Patients</span>
                     </Link>
                   </div>
                   <div className="header-navmenu">
                     <Link
+                      href="/ic"
+                      className={`home-link ${router.pathname === "/ic" ? "homeactive" : ""
+                        }`}
+                    >
+                      <span>Insurance Corner</span>
+                    </Link>
+                  </div>
+                  {/* <div className="header-navmenu">
+                    <Link
+                      href="/sp"
+                      className={`home-link ${router.pathname === "/sp" ? "homeactive" : ""
+                        }`}
+                    >
+                      <span>Surgery Package</span>
+                    </Link>
+                  </div> */}
+                  {/* <div className="header-navmenu">
+                    <Link
                       href="/blog"
-                      className={`home-link ${
-                        router.pathname === "/blog" ? "homeactive" : ""
-                      }`}
+                      className={`home-link ${router.pathname === "/blog" ? "homeactive" : ""
+                        }`}
                     >
                       <span> Blog </span>
                     </Link>
-                  </div>
-                  <div className="header-navmenu">
+                  </div> */}
+                  {/* <div className="header-navmenu">
                     <Link
                       href="/contact-us"
-                      className={`home-link ${
-                        router.pathname === "/contact-us" ? "homeactive" : ""
-                      }`}
+                      className={`home-link ${router.pathname === "/contact-us" ? "homeactive" : ""
+                        }`}
                     >
                       <span> Contact</span>
                     </Link>
-                  </div>
+                  </div> */}
+                  {/* <Button
+                    sx={{
+                      backgroundColor: "#669934" ,
+                      color: "#FFF",
+                      px: { xs: 3, md: 5 },
+                      py: 2,
+                      height: "48px",
+                      fontFamily: "DM Sans",
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      borderRadius: "50px",
+                      border: "1px solid #FFF",
+                    }}
+                  >
+                    PATIENT LOGIN
+                  </Button> */}
                 </Box>
                 <Box sx={{ display: { xs: "flex", md: "none" } }}>
                   <Box className="menu-icon">
                     <Image
                       src={"/assets/icons/hambergermenu.png"}
                       unoptimized={true}
-                      width={35}
-                      height={15}
+                      width={38}
+                      height={22}
                       alt="menu"
                       onClick={handleModalOpen}
                       style={{ cursor: "pointer" }}
@@ -210,7 +280,7 @@ export const Header = () => {
                       router.pathname === "/about-us" ? "homeactive" : ""
                     }
                   >
-                    About
+                    About Us
                   </Link>
                 </div>
                 <div
@@ -231,14 +301,32 @@ export const Header = () => {
                   style={{ marginBottom: 10 }}
                 >
                   <Link
-                    href="/specialists"
+                    href="/ip"
                     className={
-                      router.pathname === "/specialists" ? "homeactive" : ""
+                      router.pathname === "/ip" ? "homeactive" : ""
                     }
                   >
-                    <span> Specialists </span>
+                    <span> International Patients </span>
                   </Link>
                 </div>
+                <div className="header-navmenu">
+                    <Link
+                      href="/ic"
+                      className={`home-link ${router.pathname === "/ic" ? "homeactive" : ""
+                        }`}
+                    >
+                      <span>Insurance Corner</span>
+                    </Link>
+                  </div>
+                  <div className="header-navmenu">
+                    <Link
+                      href="/book-appointment"
+                      className={`home-link ${router.pathname === "/book-appointment" ? "homeactive" : ""
+                        }`}
+                    >
+                      <span>Book Appoinment</span>
+                    </Link>
+                  </div>
                 <div
                   className="header-navmenu-mubile"
                   style={{ marginBottom: 10 }}
@@ -260,7 +348,7 @@ export const Header = () => {
                       router.pathname === "/contact-us" ? "homeactive" : ""
                     }
                   >
-                    Contact
+                    Contact Us
                   </Link>
                 </div>
               </Box>

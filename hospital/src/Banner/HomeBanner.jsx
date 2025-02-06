@@ -6,8 +6,25 @@ import SocialShareIcons from "@/Layout/SocialShareIcons";
 import ImageCommon from "@/Component/ImageComponent/ImageCommon";
 import Slider from "react-slick";
 import { AutoCompleteSearch } from "@/Component/AutoCompleteSearch";
+import { useState } from "react";
+import { useEffect } from "react";
+
 
 export const HomeBanner = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
  const banners = [
    {
      id: 1,
@@ -44,11 +61,15 @@ export const HomeBanner = () => {
     dots: true,
     lazyLoad: "ondemand",
     customPaging: () => <div className="reactslick-custom-dots" />,
+    appendDots: dots => (
+      <div style={{ bottom: isMobile ? '-20px' : '20px' }}> {/* Adjust the bottom position for mobile */}
+        <ul> {dots} </ul>
+      </div>
+    ),
   };
   return (
     <>
-      <SocialShareIcons />
-      <Header />
+     
       <section>
         <Box sx={{ position: "relative" }} className="banner-selections">
           <Slider {...settings} className="slider-white-dots">
@@ -60,6 +81,7 @@ export const HomeBanner = () => {
                   aspectRatio={2.5}
                   objectFit="content"
                   priority
+                  className="responsive-image"
                 />
                 <Container>
                   <Box
@@ -71,14 +93,18 @@ export const HomeBanner = () => {
                       gap: 4,
                       position: "absolute",
                       top: "20%",
+                      '@media (max-width: 768px)': {
+                        position: "relative", // Adjust the top position for mobile view
+                        marginTop:"40px"
+                      },
                     }}
                   >
-                    <Box sx={{ width: { xs: "100%", md: "60%" } }}>
+                    <Box sx={{ width: { xs: "80%", md: "60%" } }}>
                       <Typography
                         variant="h2"
                         component="h2"
                         sx={{
-                          fontSize: { xs: "28px", sm: "40px", md: "54px" },
+                          fontSize: { xs: "16px", sm: "40px", md: "54px" },
                           color: "#000",
                           fontWeight: 600,
                           lineHeight: "1.2em",
@@ -89,7 +115,7 @@ export const HomeBanner = () => {
                         {item.title}
                       </Typography>
                     </Box>
-                    <Box sx={{ width: { xs: "100%", md: "40%" } }}>
+                    <Box sx={{ width: { xs: "300px", md: "40%" } }}>
                       <Typography
                         variant="p"
                         component="p"

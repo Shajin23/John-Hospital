@@ -6,6 +6,8 @@ import HomeDoctors from './HomeDoctors';
 import HomeContact from './HomeContact';
 import HomeComments from './HomeComments';
 import HomeTips from './HomeTips';
+import FloatingButton from '@/Component/FloatingButtonComponent';
+
 
 const HomeSection = () => {
   return (
@@ -17,6 +19,7 @@ const HomeSection = () => {
       <HomeContact />
       <HomeComments />
       <HomeTips />
+      <FloatingButton />
     </div>
   );
 }

@@ -25,8 +25,8 @@ export const HomeFooter = () => {
           }}
         >
           <Grid container>
-            <Grid item xs={4}>
-              <Box>
+            <Grid item xs={12} md={4}>
+              <Box sx={{ mb: {xs: 2, md: 0}}}>
                 <Box>
                   <Link href="/">
                     <ImageCommon
@@ -58,7 +58,7 @@ export const HomeFooter = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={6} md={2} sx={{ mb: {xs: 2, md: 0}}}>
               <Typography
                 sx={{
                   fontSize: "18px",
@@ -92,7 +92,7 @@ export const HomeFooter = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={6} md={2} sx={{ mb: {xs: 2, md: 0}}}>
               <Typography
                 sx={{
                   fontSize: "18px",
@@ -126,7 +126,7 @@ export const HomeFooter = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
             <Typography
                 sx={{
                   fontSize: "18px",
@@ -140,7 +140,7 @@ export const HomeFooter = () => {
               <div className="glory-line">
                 <span></span>
               </div>
-              <Box sx={{display:  'flex', gap: '8px', mb: '8px'}}>
+              <Box sx={{display:  'flex', gap: '8px', mb: '8px', flexDirection: {xs: 'column', md: 'row'}}}>
               <input type="text" id="fname" name="fname" placeholder="first Name" className="footer-input"/>
               <input type="text" id="lname" name="lname" placeholder="Last Name" className="footer-input"/>
               </Box>

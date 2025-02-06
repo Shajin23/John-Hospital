@@ -19,7 +19,8 @@ export default function ImageCommon({
           aspectRatio: aspectRatio,
           width: width,
           height: height,
-          position:"relative"
+          position:"relative",
+          className:"responsive-image"
         }}
       >
         {!original ? (
@@ -32,6 +33,7 @@ export default function ImageCommon({
             style={{ objectFit: objectFit }}
             unoptimized={true}
             alt="img"
+            className="responsive-image"
           />
         ) : (
           <Image
@@ -44,6 +46,7 @@ export default function ImageCommon({
             priority={priority}
             style={{ width: "100%", height: "100%", objectFit: objectFit }}
             alt="img"
+            className="responsive-image"
           />
         )}
       </div>

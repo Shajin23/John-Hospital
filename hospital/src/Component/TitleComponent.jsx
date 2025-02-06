@@ -14,7 +14,7 @@ const TitleComponent = (props) => {
     >
       <Typography
         sx={{
-          fontSize: "26px",
+          fontSize: {xs:'18px', md: "26px !important"},
           fontWeight: 800,
           fontFamily: '"DM Sans", sans-serif',
         }}

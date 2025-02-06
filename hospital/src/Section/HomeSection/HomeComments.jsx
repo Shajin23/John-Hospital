@@ -47,6 +47,15 @@ const HomeComments = () => {
     dots: true,
     lazyLoad: "ondemand",
     customPaging: () => <div className="reactslick-custom-dots" />,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile view breakpoint
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ]
   };
   return (
     <Box sx={{ pt: { xs: 3, sm: 4, md: "20px" } }}>
@@ -89,7 +98,7 @@ const HomeComments = () => {
             {comments.map((item) => (
               <>
                 <Box
-                 key={item.id}
+                 key={item?.id}
                   sx={{
                     p: 3.5,
                     boxShadow:

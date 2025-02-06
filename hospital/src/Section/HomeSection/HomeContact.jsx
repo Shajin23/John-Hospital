@@ -10,8 +10,8 @@ const HomeContact = () => {
           maxWidth: { xl: "77% !important", lg: "77% !important" },
         }}
       >
-        <Grid container>
-          <Grid item xs={9}>
+        <Grid container className="home-contact">
+          <Grid item xs={12} md={9}>
             <Box sx={{ pl: 4 }}>
               <Typography
                 sx={{
@@ -37,19 +37,20 @@ const HomeContact = () => {
                   fontFamily: "DM Sans",
                   opacity: 0.8,
                   mt: 2,
+                  mb:2
                 }}
               >
                 You can get upto 30% off for 45 days in here! So Contact with Us
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3}>
             <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', height: '100%'}}>
             <Button
               sx={{
                 backgroundColor: "#fff",
                 color: "#07447e",
-                px: { xs: 3, md: 5 },
+                px: { xs: 12, md: 5 },
                 py: 2,
                 height: "50px",
                 fontFamily: "DM Sans",

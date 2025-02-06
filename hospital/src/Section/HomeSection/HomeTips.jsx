@@ -62,6 +62,15 @@ const HomeTips = () => {
         dots: true,
         lazyLoad: "ondemand",
         customPaging: () => <div className="reactslick-custom-dots" />,
+        responsive: [
+          {
+            breakpoint: 768, // Mobile view breakpoint
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 2,
+            },
+          },
+        ]
       };
   return (
     <Box sx={{ pt: { xs: 3, sm: 4, md: "20px" }, pb: {md: 10} }}>

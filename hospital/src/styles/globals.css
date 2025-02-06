@@ -39,8 +39,10 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 }
+
 p {
   font-family: "DM Sans";
+  
 }
 
 h1,
@@ -56,13 +58,17 @@ h6 {
 
 .header-navmenu a {
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-decoration: none;
   font-family: "DM Sans", sans-serif !important;
 }
+.top-menu a{
+  font-size:16px;
+}
+
 .header-navmenu a:hover {
   color: rgb(5, 1, 236) !important;
 }
@@ -70,6 +76,7 @@ h6 {
 .header-navmenu a.active {
   color: rgb(5, 1, 236) !important;
 }
+
 .homeactive {
   color: rgb(5, 1, 236) !important;
 }
@@ -102,6 +109,13 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.glory-sections.aboutus p{
+  /* font-size:17px !important; */
+  margin-bottom:10px !important;
+}
+.vmv p{
+  margin-bottom:10px !important;
 }
 
 .glory-section::before {
@@ -146,6 +160,7 @@ h6 {
   text-decoration: none;
   font-family: "DM Sans", sans-serif !important;
 }
+
 .header-navmenu-mubile a:hover {
   color: #fd9800 !important;
 }
@@ -186,12 +201,12 @@ h6 {
 
 .language-select {
   border-radius: 50px !important;
-  border-color: #fff !important;
-  border: 1px solid #fff !important;
+  border-color: #000 !important;
+  border: 1px solid #000 !important;
   background: transparent !important;
   height: 48px;
   padding: 0px 20px;
-  color: #fff !important;
+  color: #000 !important;
   width: 130px;
 }
 
@@ -269,12 +284,13 @@ h6 {
   font-weight: 400;
   font-family: "DM Sans", sans-serif !important;
 }
+
 .zoom-img img {
   object-fit: cover;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .zoom-img img:hover {
@@ -293,7 +309,7 @@ h6 {
   transform: scale(1.1);
 }
 
-.tips-slider .slick-slide{
+.tips-slider .slick-slide {
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -305,7 +321,7 @@ h6 {
   transition: all 1s ease;
 }
 
-.card-box:hover{
+.card-box:hover {
   transform: scale(1.1);
 }
 
@@ -315,7 +331,7 @@ h6 {
   gap: 15px;
 }
 
-.comments-slider .slick-slide{
+.comments-slider .slick-slide {
   margin-top: 24px;
 }
 
@@ -371,12 +387,13 @@ h6 {
   border: 1px solid #333;
   color: #fff;
 }
-.footer-input::placeholder, 
+
+.footer-input::placeholder,
 .footer-message::placeholder {
   color: #fff;
 }
 
-.footer-message{
+.footer-message {
   padding: 10px;
   background-color: #333;
   border: 1px solid #333;
@@ -402,7 +419,7 @@ h6 {
   display: inline-block !important;
   width: 45px !important;
   height: 45px !important;
-  background-image: url(https://staging.iktaraa.com/connect/assets/icons/arrow-right.svg) !important;
+  background-image: url(/assets/icons/arrow-right.svg) !important;
   background-size: cover !important;
   position: relative;
   right: 30px;
@@ -434,10 +451,100 @@ h6 {
   display: inline-block !important;
   width: 45px !important;
   height: 45px !important;
-  background-image: url(https://staging.iktaraa.com/connect/assets/icons/arrow-right.svg) !important;
+  background-image: url(/assets/icons/arrow-right.svg) !important;
   background-size: cover !important;
   position: relative;
   right: 30px;
   z-index: 9999;
   bottom: 30px;
+}
+
+.about-header-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: url(/assets/banner/about-banner.jpg);
+  height: 60vh;
+  filter: brightness(0.8);
+}
+
+.banner-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+}
+
+.our-values li {
+  font-size: 16px;
+  opacity: 0.8;
+  color: #454F5E;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.our-values {
+  padding-left: 16px;
+}
+
+.box-card-section {
+  padding: 20px;
+  border: 2px solid #f5f8fa;
+  box-shadow: 3px 4px 15px #00000026;
+  border-radius: 10px;
+  max-height: 280px;
+  height: 100%;
+}
+.vm-desc{
+  font-size: 18px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.append-dots{
+  bottom: 0;
+}
+/* floating button CSS */
+
+.floatingButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #669934;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floatingButton:hover {
+  background-color: #005bb5;
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-image {
+    aspect-ratio: 1.5; /* Adjust the aspect ratio for mobile view */
+    object-fit: cover; /* Adjust the object fit for mobile view */
+  }
+  .floatingButton {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .footer{
+    padding-top: 30px !important;
+  }
+  .home-contact{
+    text-align: center;
+  }
+  .append-dots{
+    position: absolute;
+    bottom:-40px !important;
+  }
 }

@@ -58,13 +58,13 @@ const HomeBook = () => {
               sx={{
                 boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                 borderRadius: "8px",
-                py: 6,
-                px: 4,
+                py: {xs: 3, md:6},
+                px: {xs: 2, md:4},
               }}
             >
               <Box>
                 <TitleComponent title={"Book Appointment"} />
-                <Box sx={{ width: "380px", mt: "6px" }}>
+                <Box sx={{ width: {md: "380px"}, mt: "6px" }}>
                   <Box sx={{ marginBottom: "26px" }}>
                     <SelectField
                       name="Department"
